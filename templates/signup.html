@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+  <main
+    class="flex flex-col gap-5 justify-center items-center w-full h-screen px-4"
+    role="main"
+    aria-label="Sign Up Page"
+  >
+    <h1 class="font-semibold text-4xl" id="signup-heading">Sign Up Page</h1>
+
+    <form
+      action="#"
+      method="POST"
+      class="flex flex-col gap-4 p-6 rounded-lg shadow-md w-full max-w-sm"
+      aria-labelledby="signup-heading"
+    >
+      <fieldset class="flex flex-col gap-4" aria-describedby="form-description">
+        <legend class="sr-only">Sign up form</legend>
+
+        <label for="name" class="text-xl">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          class="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+          aria-required="true"
+        />
+
+        <label for="email" class="text-xl">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          class="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+          aria-required="true"
+        />
+
+        <label for="password" class="text-xl">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          class="p-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+          aria-required="true"
+        />
+        <a href="/index">
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded transition duration-200"
+          aria-label="Submit your sign up information"
+        >Sign Up
+          
+        </button>
+    </a>
+      </fieldset>
+
+      <p>
+        Already have an account?
+        <a href="/login" class="text-blue-400 underline" aria-label="Go to Login Page">
+          Login
+        </a>
+      </p>
+    </form>
+  </main>
+</body>
+</html>

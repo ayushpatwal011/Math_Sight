@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathSight</title>
+  <link rel="stylesheet" href="{{ url_for("static",filename="style.css")}}">
+</head>
+
+<body>
+
+  <!-- {% include "nav.html" %} -->
+  <section class="content">
+    {% include "nav.html"%}
+    <div class="container">
+      <h1>Welcome to MathSight</h1>
+      <p>Your Personalized AI Maths Tutor!</p>
+    </div>
+
+    <main>
+      <div id="options">
+        <div id="first-two">
+          <div id="ClassRoom" class="classroom">
+            <a href="/classroom">
+              <img src="{{ url_for("static",filename="bg.jpg")}}" alt="Classroom Icon" />
+              <div class="title">Classroom</div>
+            </a>
+          </div>
+
+          <div id="progress" class="progress">
+            <a href="/progress">
+              <img src="{{ url_for("static",filename="progress.webp")}}" />
+              <div class="title">Progress</div>
+            </a>
+          </div>
+        </div>
+
+        <div id="last-two">
+          <div id="community" class="community">
+            <a href="/community">
+              <img src="{{ url_for("static",filename="community.jpg")}}" alt="Community Icon" />
+              <div class="title">Community</div>
+            </a>
+          </div>
+
+          <div id="exam" class="test">
+            <a href="/test">
+              <img src="{{ url_for("static",filename="test.jpg")}}"  alt="exam hall"/>
+              <div class="title">Exam</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</body>
+
+</html>

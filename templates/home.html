@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathSight Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/50 backdrop-blur-md py-4 px-8 shadow-md sticky top-0 z-50">
+      <a
+        href="#main-content"
+        class="sr-only focus:not-sr-only absolute left-4 top-2 bg-white text-black px-3 py-1 z-50"
+      >
+        Skip to main content
+      </a>
+
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="text-3xl font-extrabold text-yellow-400">
+          <a href="/" aria-label="Go to MathSight homepage">MathSight</a>
+        </div>
+
+        <ul class="flex space-x-8 text-gray-300 font-medium text-lg">
+          <li><a href="/" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="/about" class="hover:text-yellow-400 transition">About</a></li>
+          <li><a href="/how-it-work" class="hover:text-yellow-400 transition">How it Works</a></li>
+          
+        </ul>
+
+        <div class="flex gap-2">
+          <a href="/login">
+            <button class="bg-yellow-400 text-black px-5 py-2 rounded hover:bg-white transition font-bold flex items-center gap-2">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+          </a>
+          <a href="/signup">
+            <button class="bg-yellow-400 text-black px-5 py-2 rounded hover:bg-white transition font-bold flex items-center gap-2">
+              <i class="fas fa-user-plus"></i> Signup
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+      <section class="px-8 py-16 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <div class="flex-1">
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">
+              Learn with <span class="text-yellow-400">MathSight</span>
+            </h1>
+            <p class="text-gray-300 text-2xl mb-8">
+              Your online teacher and guide. Powered by modern AI features. Ask your first doubt right now.
+            </p>
+            <div class="flex space-x-4">
+              <button class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-black transition font-bold text-xl flex items-center gap-2">
+                <i class="fa-solid fa-play-circle"></i> Demo Video
+              </button>
+              <button class="bg-yellow-400 text-black px-6 py-3 rounded hover:bg-white hover:text-black transition font-bold text-xl flex items-center gap-2">
+              Ask Your First Question
+              <span>
+                <i class="fa-solid fa-question"></i>
+              </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <img
+              src="{{url_for("static",filename="/head.webp")}}"
+              alt="Illustration showing online learning with a virtual teacher"
+              class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-300"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 text-center py-6">
+      <p class="text-xl">
+        &copy; <span id="year"></span> MathSight. <span class="text-white">Hackathon Project</span>.
+      </p>
+    </footer>
+
+    <!-- Auto Year Script -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

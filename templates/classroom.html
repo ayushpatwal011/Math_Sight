@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='classroom.css') }}">
+    <title>ClassRoom</title>
+</head>
+<body>
+    {% include "nav.html" %}
+
+    <div id="dashboard">
+        <div id="greet">
+            <div id="image"><img src="{{url_for("static",filename ="demo.jpg")}}"></div>
+            <div id="text">
+                <h2>Welcome back!</h2>
+                <p>Ready to continue your learning?</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="item">
+                <h3>Current Chapter</h3>
+                <p><strong>Statistics</strong></p>
+            </div>
+            <div class="item">
+                <h3>Current Topic</h3>
+                <p><strong>Mean</strong></p>
+            </div>
+            <div class="item">
+                <h3>Next Topic</h3>
+                <p><strong>Median</strong></p>
+            </div>
+            <div class="item">
+                <h3>Weak Area</h3>
+                <p><strong>Frequency Distribution</strong></p>
+            </div>
+        </div>
+
+        <div id="workspace">
+            <main>
+                <h3>Ask Your Statistics Question</h3>
+                <button onclick="startListening()">🎤 Speak Your Question</button>
+                <input type="text" id="question" placeholder="Your question will appear here" readonly>
+                <button onclick="startListening()">Submit</button>
+                <h3>Answer:</h3>
+                <div id="answer">Waiting for your question...</div>
+            </main>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='chat.js')}}"></script>
+</body>
+
+</html>
